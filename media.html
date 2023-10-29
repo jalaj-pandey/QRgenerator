@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shorcut icon" href="/images/QR.png">
+    <title>QR Code Generator</title>
+</head>
+<body>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
+    <div class="grid">
+        <h2>QR Code Generator</h2>
+        <center><img src="" id="img"></center>
+        <select id="size">
+            <option value="150">150x150</option>
+            <option value="200">200x200</option>
+            <option value="250" selected>250x250</option>
+            <option value="300">300x300</option>
+            <option value="400">400x400</option>
+        </select>
+        <br><br>
+        <select id="type" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+            <option value="index.html">Text to QR</option>
+            <option value="text_files.html">Text files to QR</option>
+            <option value="media.html" selected>Media to QR</option>
+        </select>
+
+        <br><br>
+        <input type="file" id="qrmedia" accept="image/*,video/mp4,audio/*" >
+        <br><br>
+        <input type="submit" value="Generate" onclick="genMQR()">
+
+        <p>Developed By <a href="https://admin.strugglers.in" style="font-weight: bold;">Jalaj Pandey</a></p>
+    </div>
+</body>
+</html>
